@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainPageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +14,9 @@ use App\Http\Controllers\MainPageController;
 |
 */
 
-Route::get('/', [MainPageController::class, 'home'])->name('home');
-Route::get('/about-us', [MainPageController::class, 'aboutUs'])->name('about-us');
-Route::get('/contact-us', [MainPageController::class, 'contactUs'])->name('contact-us');
-Route::get('/tracking', [MainPageController::class, 'tracking'])->name('tracking');
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
