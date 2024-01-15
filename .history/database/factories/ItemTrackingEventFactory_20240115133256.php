@@ -31,7 +31,6 @@ class ItemTrackingEventFactory extends Factory
             'title' => fake()->sentence(),
             'location' => fake()->city() . ', ' . fake()->country(),
             'start_datetime' => fake()->dateTime(),
-            'status' => fake()->randomElement(['picked_up', 'in_transit', 'delivered']),
         ];
     }
 

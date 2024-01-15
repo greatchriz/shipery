@@ -22,16 +22,18 @@ class ItemTrackingEventFactory extends Factory
     public function definition(): array
     {
 
+        // $table->string('title');
+        // $table->string('location')->nullable();
+        // $table->datetime('start_datetime');
+
 
         $itemCount = \App\Models\Item::count();
 
 
         return [
             'item_id' => rand(1, $itemCount),
-            'title' => fake()->sentence(),
             'location' => fake()->city() . ', ' . fake()->country(),
             'start_datetime' => fake()->dateTime(),
-            'status' => fake()->randomElement(['picked_up', 'in_transit', 'delivered']),
         ];
     }
 

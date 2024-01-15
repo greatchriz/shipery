@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('item_id')->constrained('items');
             $table->string('title');
-            $table->string('location')->nullable();
             $table->datetime('start_datetime');
-            $table->enum('status', ['picked_up', 'in_transit', 'delivered']);
+            $table->string('location')->nullable();
+
             $table->timestamps();
         });
     }

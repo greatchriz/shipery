@@ -50,27 +50,12 @@
 
                     </ul>
                 </div>
-                @if($item->status == 'delivered')
-                    <div class="tracking_in tag-delivered">
-                        <h4>DELIVERED</h4>
-                    </div>
-                @elseif ($item->status == 'in_transit')
-                    <div class="tracking_in" >
-                        <h4>IN TRANSIT</h4>
-                    </div>
-
-                @endif
-
+                <div class="tracking_in tag-delivered">
+                    <h4>DELIVERED</h4>
+                </div>
                 <div class="tracking_list">
                     <ul>
-                        @foreach ($item->trackingEvents as $event)
-
-                            <x-sections.event_detail :event=$event />
-
-                        @endforeach
-
-
-                        {{-- <li>
+                        <li>
                             <div class="checkpoint__time">
                                 <strong>Oct 23, 2017</strong>
                                 <div class="hint">02:55 pm</div>
@@ -79,8 +64,8 @@
                             <div class="checkpoint__content">
                                 <strong>Delivered, In/At Mailbox<span class="checkpoint__courier-name">USPS</span></strong>
                                 <div class="hint">ISC NEW YORK NY(USPS)</div>
-                            </div> --}}
-                        {{-- </li>
+                            </div>
+                        </li>
                         <li>
                             <div class="checkpoint__time">
                                 <strong>Oct 23, 2017</strong>
@@ -124,7 +109,7 @@
                                 <strong>Picked Up by Shipping Partner<span class="checkpoint__courier-name">USPS</span></strong>
                                 <div class="hint">ISC CALIFORNIA NY(USPS)</div>
                             </div>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </div>

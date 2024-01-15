@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('location')->nullable();
             $table->datetime('start_datetime');
-            $table->enum('status', ['picked_up', 'in_transit', 'delivered']);
             $table->timestamps();
         });
     }

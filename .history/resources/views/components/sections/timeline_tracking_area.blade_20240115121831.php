@@ -6,71 +6,36 @@
         <div class="timeline_tracking_inner">
             <div class="timeline_tracking_box">
                 <div class="tracking_head">
-                    <h4>{{ $item->tracking_number }}</h4>
+                    <h4>UM459056399US</h4>
                 </div>
                 <div class="scheduled_area">
                     <ul>
-
-
-                            <li>
-                                <div class="schedul_box">
-                                    <h5>Pickup</h5>
-                                </div>
-                                @if($item->status == 'picked_up')
-                                    <div class="s_icon active"></div>
-                                @else
-                                    <div class="s_icon"></div>
-                                @endif
-                            </li>
-                            <li>
-                                <div class="schedul_box">
-                                    <h5>In Transist</h5>
-                                </div>
-                                @if($item->status == 'in_transit')
-                                    <div class="s_icon active"></div>
-                                @else
-                                    <div class="s_icon"></div>
-                                @endif
-                            </li>
-                            <li>
-                                <div class="schedul_box">
-                                    <h5>Delivery</h5>
-                                </div>
-                                @if($item->status == 'delivered')
-                                    <div class="s_icon active"></div>
-                                @else
-                                    <div class="s_icon"></div>
-                                @endif
-                            </li>
-
-
-
-
-
-
+                        <li>
+                            <div class="schedul_box">
+                                <h5>Pickup</h5>
+                            </div>
+                            <div class="s_icon"></div>
+                        </li>
+                        <li>
+                            <div class="schedul_box">
+                                <h5>In Transist</h5>
+                            </div>
+                            <div class="s_icon"></div>
+                        </li>
+                        <li>
+                            <div class="schedul_box">
+                                <h5>Delivery</h5>
+                            </div>
+                            <div class="s_icon active"></div>
+                        </li>
                     </ul>
                 </div>
-                @if($item->status == 'delivered')
-                    <div class="tracking_in tag-delivered">
-                        <h4>DELIVERED</h4>
-                    </div>
-                @elseif ($item->status == 'in_transit')
-                    <div class="tracking_in" >
-                        <h4>IN TRANSIT</h4>
-                    </div>
-
-                @endif
-
+                <div class="tracking_in tag-delivered">
+                    <h4>DELIVERED</h4>
+                </div>
                 <div class="tracking_list">
                     <ul>
-                        @foreach ($item->trackingEvents as $event)
-
-                            <x-sections.event_detail :event=$event />
-
-                        @endforeach
-
-
-                        {{-- <li>
+                        <li>
                             <div class="checkpoint__time">
                                 <strong>Oct 23, 2017</strong>
                                 <div class="hint">02:55 pm</div>
@@ -79,8 +44,8 @@
                             <div class="checkpoint__content">
                                 <strong>Delivered, In/At Mailbox<span class="checkpoint__courier-name">USPS</span></strong>
                                 <div class="hint">ISC NEW YORK NY(USPS)</div>
-                            </div> --}}
-                        {{-- </li>
+                            </div>
+                        </li>
                         <li>
                             <div class="checkpoint__time">
                                 <strong>Oct 23, 2017</strong>
@@ -124,7 +89,7 @@
                                 <strong>Picked Up by Shipping Partner<span class="checkpoint__courier-name">USPS</span></strong>
                                 <div class="hint">ISC CALIFORNIA NY(USPS)</div>
                             </div>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </div>

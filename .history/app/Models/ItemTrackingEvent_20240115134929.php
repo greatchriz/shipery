@@ -23,11 +23,6 @@ class ItemTrackingEvent extends Model
         return Carbon::parse($this->start_datetime)->format('M d, Y');
     }
 
-    public function getFormattedStartTimeAttribute()
-    {
-        return Carbon::parse($this->start_datetime)->format('h:i a');
-    }
-
     // echo $event->formatted_start_date;
 
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('receiver_id')->constrained('receivers');
             $table->enum('shipment_type', ['domestic', 'international']);
             $table->integer('weight');
-            $table->enum('status', ['picked_up', 'in_transit', 'delivered']);
+            $table->enum('status', ['in_system', 'picked_up', 'in_transit', 'delivered']);
             $table->date('shipped_on')->nullable();
             $table->timestamps();
         });

@@ -63,11 +63,6 @@
 
                 <div class="tracking_list">
                     <ul>
-                        @foreach ($item->trackingEvents as $event)
-
-                            <x-sections.event_detail :event=$event />
-
-                        @endforeach
 
 
                         {{-- <li>

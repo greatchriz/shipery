@@ -28,10 +28,8 @@ class ItemTrackingEventFactory extends Factory
 
         return [
             'item_id' => rand(1, $itemCount),
-            'title' => fake()->sentence(),
             'location' => fake()->city() . ', ' . fake()->country(),
             'start_datetime' => fake()->dateTime(),
-            'status' => fake()->randomElement(['picked_up', 'in_transit', 'delivered']),
         ];
     }
 
