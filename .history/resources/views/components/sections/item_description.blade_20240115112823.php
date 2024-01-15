@@ -36,12 +36,29 @@
                                         <p style="font-weight: bold">
                                             {{ $item->sender->name }}
                                         </p>
-
-
-                                        <h3>Address</h3>
-                                        <p>
-                                            {{ $item->sender->street }} {{ $item->sender->city }} {{ $item->sender->state }} {{ $item->sender->zip }} {{ $item->sender->country }}
-                                        </p>
+                                        <ul class="s_list">
+                                            <li>
+                                                <a href="#"><i class="fa fa-check" aria-hidden="true"></i>Building
+                                                    a strategic development
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-check" aria-hidden="true"></i>Plan is
+                                                    vital, as the tactics game</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-check" aria-hidden="true"></i>Take
+                                                    advantage of any investment
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fa fa-check" aria-hidden="true"></i>Plan a
+                                                    investment for future</a>
+                                            </li>
+                                        </ul>
+                                        <button type="submit" value="submit your quote" class="btn submit_blue form-control">
+                                            Apply Now <i class="fa fa-angle-right"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

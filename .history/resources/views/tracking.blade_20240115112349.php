@@ -5,7 +5,7 @@
     <x-sections.tracking_search_area />
 
     @isset($item)
-        <x-sections.item_description :item=$item />
+        <x-sections.item_description item=$item />
 
         <x-sections.timeline_tracking_area />
     @endisset
