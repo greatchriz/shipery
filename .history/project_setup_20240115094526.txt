@@ -1,0 +1,33 @@
+this project has Items
+items have the following details
+1, tracking number
+2, sender_address_id and receiver_address_id which are all related to the address table.
+3, shipment_type it can be either domestic or international
+4, weight this is the weight of the package
+5, status this is the status of the shipment which can be in_system, picked_up, in_transit, dispatched, delivered
+6, shipped_on which means the date that the package was shipped. if the package status is in_system then there wont be any shipped_on for the row
+
+
+this project has Item Addresses
+item_addresses have the following details
+1, name the name of the person that the address  belongs to.
+2, street the street of the address
+3, municipality
+4, region
+5, postal_code
+6, country
+
+nb: the id of these item addresses is used for both sender_address_id and receiver_address_id on the items table
+
+
+then we have item tracking events
+item_tracking_events have the following details
+1, item_id this relates to the item table
+2, location_municipality the area the event took place
+3, location_region the region of the location the event took place
+4, location_country the country of the shipment
+5, details other details about the events
+
+
+
+touch our_about_area.blade.php global_text_area.blade.php why_choose_area.blade.php our_team_area.blade.php client_logo_area.blade.php subscribe_form.blade.php
