@@ -12,7 +12,10 @@ class ItemSeeder extends Seeder
      */
     public function run(): void
     {
-        $items = \App\Models\Item::factory(70)->create();
+        $items = \App\Models\Item::factory(70)->create([
+            'sender_id' => \App\Models\Sender::all()->random()->id,
+            'receiver_id' => \App\Models\Receiver::all()->random()->id
+        ]);
 
     }
 }

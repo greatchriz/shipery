@@ -24,8 +24,8 @@ class ItemFactory extends Factory
         return [
             'image_src' => '/img/1.jpg',
             'tracking_number' => fake()->bothify('##########'),
-            'sender_id' => Sender::inRandomOrder()->first()->id,
-            'receiver_id' => Receiver::inRandomOrder()->first()->id,
+            'sender_id' => random_int(1, 80),
+            'receiver_id' => random_int(1, 80),
             'shipment_type' => fake()->randomElement(['domestic', 'international']),
             'weight' => fake()->randomFloat([0.1, 2.0]),
             'status' => fake()->randomElement(['picked_up', 'in_transit', 'delivered']),

@@ -7,15 +7,12 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @if(auth()->user()->email != 'admin@example.com')
-
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-5">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
                 </div>
             </div>
 
-            @else
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <ul role="list" class="divide-y divide-gray-500">
@@ -27,9 +24,6 @@
 
                 </div>
             </div>
-
-            @endif
-
         </div>
     </div>
 </x-app-layout>
