@@ -979,17 +979,8 @@
             Content body start
         ***********************************-->
         <div class="content-body">
-            <div class="container-fluid">
 
-                <!-- row -->
-                <div class="row">
-
-                    {{ $slot }}
-
-                </div>
-                <!-- row -->
-
-            </div>
+            {{ $slot }}
 
         </div>
         <!--**********************************

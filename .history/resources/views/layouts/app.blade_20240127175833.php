@@ -963,10 +963,16 @@
                         navTitle="Dashboard"
                     />
 
-                    <x-dashboard.nav-menu
-                        :active="request()->routeIs('sender.index')"
-                        navLink="/senders"
-                        navTitle="Senders"
+                    <x-navigation
+                        :active="request()->routeIs('about-us')"
+                        navLink="/about-us"
+                        navTitle="About Us"
+                    />
+
+                    <x-navigation
+                        :active="request()->routeIs('contact-us')"
+                        navLink="/contact-us"
+                        navTitle="Contact Us"
                     />
 				</ul>
 			</div>
@@ -979,17 +985,8 @@
             Content body start
         ***********************************-->
         <div class="content-body">
-            <div class="container-fluid">
 
-                <!-- row -->
-                <div class="row">
-
-                    {{ $slot }}
-
-                </div>
-                <!-- row -->
-
-            </div>
+            {{ $slot }}
 
         </div>
         <!--**********************************

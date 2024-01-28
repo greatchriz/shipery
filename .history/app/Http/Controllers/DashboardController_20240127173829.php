@@ -21,7 +21,7 @@ class DashboardController extends Controller
     // senderIndex
     public function senderIndex()
     {
-        $senders = Sender::with(['items'])->latest()->get();
+        $senders = Sender::with(['items'])->latest->get();
 
         return view('sender.index', compact('senders'));
     }
