@@ -1,8 +1,7 @@
 @aware(['item'])
 
 @php
-    $columns = ['image_src', 'tracking_number', 'shipment_type', 'weight', 'status', 'shipped_on']; // Add the column names you want to display here
-    $attributes = $item->only($columns);
+    $attributes = $item->getAttributes();
 @endphp
 
 @foreach($attributes as $column => $value)
