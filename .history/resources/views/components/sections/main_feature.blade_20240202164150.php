@@ -58,10 +58,45 @@
           </div>
           <div class="media-body">
             <a href="#">
-              <h4>E-Commerce Expertise</h4>
+              <h4>Online Booking</h4>
             </a>
             <p>
-                Whether you’re selling online B2B or B2C, we know how to help you adapt and stay ahead of the global e-commerce curve, so that your business can keep up with the clicks.
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
+            </p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <img
+              class="svg social-link"
+              src="/img/icon/svg/flight.svg"
+              alt="" />
+          </div>
+          <div class="media-body">
+            <a href="#">
+              <h4>Online Booking</h4>
+            </a>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
+            </p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <img
+              class="svg social-link"
+              src="/img/icon/svg/telemarketer.svg"
+              alt="" />
+          </div>
+          <div class="media-body">
+            <a href="#">
+              <h4>Online Booking</h4>
+            </a>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
             </p>
           </div>
         </div>

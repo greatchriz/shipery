@@ -35,10 +35,10 @@
     </section>
 
 
-{{--
+
     <x-sections.testimonials_area />
 
-    <x-sections.about_area /> --}}
+    <x-sections.about_area />
 
     <x-sections.client_logo_area />
 

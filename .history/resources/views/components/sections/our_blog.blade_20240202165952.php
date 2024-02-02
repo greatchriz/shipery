@@ -26,22 +26,53 @@
                     ],
                 ]
         @endphp
+        <div class="col-md-4">
+            <div class="our_blog_item">
+                <div class="our_blog_img">
+                    <img src="/img/" alt="">
 
-        @foreach ($discover as $item)
-            <div class="col-md-3">
-                <div class="our_blog_item">
-                    <div class="our_blog_img">
-                        <img src="/img/{{ $item['image'] }}" alt="">
-                    </div>
-                    <div class="our_blog_content">
-                        <a href="#">
-                            {{ $item['title'] }}
-                        </a>
+                </div>
+                <div class="our_blog_content">
+                    <a href="blog-details.html">
+                        QUALITY CARGO SERVICES AT AFFORDABLE PRICE
+                    </a>
 
-                    </div>
+
                 </div>
             </div>
-        @endforeach
+        </div>
+
+        <div class="col-md-4">
+            <div class="our_blog_item">
+                <div class="our_blog_img">
+                    <img src="/img/" alt="">
+
+                </div>
+                <div class="our_blog_content">
+                    <a href="blog-details.html">
+                        QUALITY CARGO SERVICES AT AFFORDABLE PRICE
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="our_blog_item">
+                <div class="our_blog_img">
+                    <img src="/img/" alt="">
+
+                </div>
+                <div class="our_blog_content">
+                    <a href="blog-details.html">
+                        QUALITY CARGO SERVICES AT AFFORDABLE PRICE
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
 
       </div>
     </div>

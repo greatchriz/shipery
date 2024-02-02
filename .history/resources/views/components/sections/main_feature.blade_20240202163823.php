@@ -26,10 +26,11 @@
           </div>
           <div class="media-body">
             <a href="#">
-              <h4>Tailored Solutions</h4>
+              <h4>Online Booking</h4>
             </a>
             <p>
-                From centralized management to API’s and Shopfront integrations, we have expedited shipment creation, monitoring and billing solutions that work for your needs – not ours.
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
             </p>
           </div>
         </div>
@@ -42,10 +43,11 @@
           </div>
           <div class="media-body">
             <a href="#">
-              <h4>On Demand Delivery for Shippers</h4>
+              <h4>Online Booking</h4>
             </a>
             <p>
-                With our global redelivery platform, shippers can reduce failed delivery attempts and provide an outstanding customizable receiver experience.
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
             </p>
           </div>
         </div>
@@ -58,10 +60,45 @@
           </div>
           <div class="media-body">
             <a href="#">
-              <h4>E-Commerce Expertise</h4>
+              <h4>Online Booking</h4>
             </a>
             <p>
-                Whether you’re selling online B2B or B2C, we know how to help you adapt and stay ahead of the global e-commerce curve, so that your business can keep up with the clicks.
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
+            </p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <img
+              class="svg social-link"
+              src="/img/icon/svg/flight.svg"
+              alt="" />
+          </div>
+          <div class="media-body">
+            <a href="#">
+              <h4>Online Booking</h4>
+            </a>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
+            </p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <img
+              class="svg social-link"
+              src="/img/icon/svg/telemarketer.svg"
+              alt="" />
+          </div>
+          <div class="media-body">
+            <a href="#">
+              <h4>Online Booking</h4>
+            </a>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random
+              text.
             </p>
           </div>
         </div>

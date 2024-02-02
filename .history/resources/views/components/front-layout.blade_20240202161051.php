@@ -18,7 +18,7 @@
             type="image/x-icon"
         />
 
-        <title>Fast Door to Door Delivery Services</title>
+        <title>Start.ly — Logistics, Cargo & Courier Website Template</title>
 
         <link
             href="/css/font-awesome.min.css"
@@ -201,7 +201,8 @@
                                     alt=""
                                 /></a>
                                 <p>
-                                    At Frieghtly, we're not just colleagues, we're a global force of over 600,000 logistics enthusiasts. Fueled by a shared passion for streamlining the world's supply chains, we thrive in a dynamic environment that blends the agility of a startup with the strength and reach of a global leader.
+                                    Start.ly Logistics is a mobile first responsive website
+                                    template for logistics or transportation.
                                 </p>
                                 <ul>
                                     <li>

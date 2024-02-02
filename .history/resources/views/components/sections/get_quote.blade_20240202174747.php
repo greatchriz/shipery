@@ -34,7 +34,7 @@
     >
             <div class="panel-body">
                     <h3 style="font-size: 16px">{{ $title }}</h3>
-                    <p style="font-size: 12px">{{ $content}}.</p>
+                    <p style="font-size: 14px">{{ $content}}.</p>
 
             </div>
     </div>

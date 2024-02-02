@@ -33,8 +33,8 @@
             aria-labelledby="{{ $id }}"
     >
             <div class="panel-body">
-                    <h3 style="font-size: 16px">{{ $title }}</h3>
-                    <p style="font-size: 12px">{{ $content}}.</p>
+                    <h3 style="font-size: 18px">{{ $title }}</h3>
+                    <p style="font-size: 16px">{{ $content}}.</p>
 
             </div>
     </div>

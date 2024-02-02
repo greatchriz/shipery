@@ -18,7 +18,7 @@
             type="image/x-icon"
         />
 
-        <title>Fast Door to Door Delivery Services</title>
+        <title>Start.ly — Logistics, Cargo & Courier Website Template</title>
 
         <link
             href="/css/font-awesome.min.css"
