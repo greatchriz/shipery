@@ -37,12 +37,6 @@ Route::put('/senders/{sender}', [DashboardController::class, 'senderUpdate'])->m
 //sender.destroy
 Route::delete('/senders/{sender}', [DashboardController::class, 'senderDestroy'])->middleware(['auth', 'verified'])->name('sender.destroy');
 
-Route::get('/receivers', [DashboardController::class, 'receiverIndex'])->middleware(['auth', 'verified'])->name('receiver.index');
-//receiver.create
-Route::get('/receivers/create', [DashboardController::class, 'receiverCreate'])->middleware(['auth', 'verified'])->name('receiver.create');
-//receiver.store
-Route::post('/receivers', [DashboardController::class, 'receiverStore'])->middleware(['auth', 'verified'])->name('receiver.store');
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

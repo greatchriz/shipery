@@ -149,11 +149,11 @@
                                     navTitle="Track"
                                 />
 
-                                {{-- <x-navigation
+                                <x-navigation
                                     :active="request()->routeIs('tracking')"
                                     navLink="/login"
                                     navTitle="Login"
-                                /> --}}
+                                />
 
                             </ul>
                             <ul class="nav navbar-nav navbar-right">

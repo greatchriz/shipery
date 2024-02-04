@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
-use App\Models\Receiver;
 use App\Models\Sender;
 
 use Illuminate\Http\Request;
@@ -22,7 +21,6 @@ class DashboardController extends Controller
     // senderIndex
     public function senderIndex()
     {
-        // get list of all senders and sort them by created_at
         $senders = Sender::with(['items'])->latest()->get();
 
         return view('sender.index', compact('senders'));
@@ -57,15 +55,6 @@ class DashboardController extends Controller
 
         return redirect()->route('sender.index');
 
-    }
-
-    // receiverIndex
-    public function receiverIndex()
-    {
-        // get list of all senders and sort them by created_at
-        $receivers = Receiver::with(['items'])->latest()->get();
-
-        return view('receiver.index', compact('receivers'));
     }
 
 

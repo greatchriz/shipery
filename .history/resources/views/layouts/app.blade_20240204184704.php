@@ -54,8 +54,8 @@
          <div class="nav-header">
             <a href="/"><img
                 src="/img/default.svg"
-                width="70px"
-                height="30px"
+                width="150px"
+                height="50px"
                 alt=""
             /></a>
 
@@ -1065,30 +1065,5 @@
 			});
 			});
 	</script>
-
-
-
-	<script>
-		(function () {
-		  'use strict'
-
-		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-		  var forms = document.querySelectorAll('.needs-validation')
-
-		  // Loop over them and prevent submission
-		  Array.prototype.slice.call(forms)
-			.forEach(function (form) {
-			  form.addEventListener('submit', function (event) {
-				if (!form.checkValidity()) {
-				  event.preventDefault()
-				  event.stopPropagation()
-				}
-
-				form.classList.add('was-validated')
-			  }, false)
-			})
-		})()
-	</script>
-
 </body>
 </html>
