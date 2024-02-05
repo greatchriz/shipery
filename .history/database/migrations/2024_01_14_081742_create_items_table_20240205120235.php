@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable()->default('text');
+            $table->string('name', 100)->nullable()->default('text');
             $table->string('image_src')->nullable();
             $table->string('tracking_number');
             $table->foreignId('sender_id')->constrained('senders');

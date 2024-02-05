@@ -49,16 +49,6 @@ Route::post('/receivers', [DashboardController::class, 'receiverStore'])->middle
 
 // items routes
 Route::get('/items', [DashboardController::class, 'itemIndex'])->middleware(['auth', 'verified'])->name('item.index');
-//item.create
-Route::get('/items/create', [DashboardController::class, 'itemCreate'])->middleware(['auth', 'verified'])->name('item.create');
-//item.store
-Route::post('/items', [DashboardController::class, 'itemStore'])->middleware(['auth', 'verified'])->name('item.store');
-//item.edit
-Route::get('/items/{item}/edit', [DashboardController::class, 'itemEdit'])->middleware(['auth', 'verified'])->name('item.edit');
-//item.update
-Route::put('/items/{item}', [DashboardController::class, 'itemUpdate'])->middleware(['auth', 'verified'])->name('item.update');
-//item.destroy
-Route::delete('/items/{item}', [DashboardController::class, 'itemDestroy'])->middleware(['auth', 'verified'])->name('item.destroy');
 
 
 Route::middleware('auth')->group(function () {

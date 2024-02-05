@@ -25,7 +25,6 @@ Route::post('/track', [ItemController::class, 'show'])->name('track');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
-// senders routes
 Route::get('/senders', [DashboardController::class, 'senderIndex'])->middleware(['auth', 'verified'])->name('sender.index');
 //sender.create
 Route::get('/senders/create', [DashboardController::class, 'senderCreate'])->middleware(['auth', 'verified'])->name('sender.create');
@@ -38,27 +37,11 @@ Route::put('/senders/{sender}', [DashboardController::class, 'senderUpdate'])->m
 //sender.destroy
 Route::delete('/senders/{sender}', [DashboardController::class, 'senderDestroy'])->middleware(['auth', 'verified'])->name('sender.destroy');
 
-
-// receivers routes
 Route::get('/receivers', [DashboardController::class, 'receiverIndex'])->middleware(['auth', 'verified'])->name('receiver.index');
 //receiver.create
 Route::get('/receivers/create', [DashboardController::class, 'receiverCreate'])->middleware(['auth', 'verified'])->name('receiver.create');
 //receiver.store
 Route::post('/receivers', [DashboardController::class, 'receiverStore'])->middleware(['auth', 'verified'])->name('receiver.store');
-
-
-// items routes
-Route::get('/items', [DashboardController::class, 'itemIndex'])->middleware(['auth', 'verified'])->name('item.index');
-//item.create
-Route::get('/items/create', [DashboardController::class, 'itemCreate'])->middleware(['auth', 'verified'])->name('item.create');
-//item.store
-Route::post('/items', [DashboardController::class, 'itemStore'])->middleware(['auth', 'verified'])->name('item.store');
-//item.edit
-Route::get('/items/{item}/edit', [DashboardController::class, 'itemEdit'])->middleware(['auth', 'verified'])->name('item.edit');
-//item.update
-Route::put('/items/{item}', [DashboardController::class, 'itemUpdate'])->middleware(['auth', 'verified'])->name('item.update');
-//item.destroy
-Route::delete('/items/{item}', [DashboardController::class, 'itemDestroy'])->middleware(['auth', 'verified'])->name('item.destroy');
 
 
 Route::middleware('auth')->group(function () {

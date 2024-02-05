@@ -99,17 +99,5 @@ class DashboardController extends Controller
 
     }
 
-    // itemIndex
-    public function itemIndex()
-    {
-        $items = Item::with(['sender', 'receiver'])->latest()->get();
-        return view('item.index', compact('items'));
-    }
-
-    // itemCreate
-    public function itemCreate()
-    {
-        return view('item.create');
-    }
 
 }

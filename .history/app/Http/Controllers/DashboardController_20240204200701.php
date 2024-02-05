@@ -74,42 +74,5 @@ class DashboardController extends Controller
         return view('receiver.create');
     }
 
-    // receiverStore
-    public function receiverStore(Request $request)
-    {
-        $request->validate([
-            'name' => 'required',
-            'street' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-            'zip' => 'required',
-            'country' => 'required',
-        ]);
-
-        Receiver::create([
-            'name' => $request->name,
-            'street' => $request->street,
-            'city' => $request->city,
-            'state' => $request->state,
-            'zip' => $request->zip,
-            'country' => $request->country,
-        ]);
-
-        return redirect()->route('receiver.index');
-
-    }
-
-    // itemIndex
-    public function itemIndex()
-    {
-        $items = Item::with(['sender', 'receiver'])->latest()->get();
-        return view('item.index', compact('items'));
-    }
-
-    // itemCreate
-    public function itemCreate()
-    {
-        return view('item.create');
-    }
 
 }

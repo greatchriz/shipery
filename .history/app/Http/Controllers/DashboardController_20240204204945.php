@@ -106,10 +106,4 @@ class DashboardController extends Controller
         return view('item.index', compact('items'));
     }
 
-    // itemCreate
-    public function itemCreate()
-    {
-        return view('item.create');
-    }
-
 }
