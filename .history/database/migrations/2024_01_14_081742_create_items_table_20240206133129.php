@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable()->default('text');
             $table->string('image_src')->nullable();
-            $table->string('tracking_number')->nullable();
+            $table->string('tracking_number');
             $table->foreignId('sender_id')->constrained('senders')->nullable();
             $table->foreignId('receiver_id')->constrained('receivers')->nullable();
             $table->enum('shipment_type', ['domestic', 'international']);

@@ -29,7 +29,8 @@
                                             </label>
                                             <div class="col-lg-6">
                                                 <div class="input-group mb-3">
-                                                    <span class="input-group-text">kg</span>
+                                                    <span class="input-group-text">$</span>
+                                                    <span class="input-group-text">0.00</span>
                                                     <input type="text" class="form-control" name="weight" id="weight" placeholder="Enter Weight" required="">
                                                 </div>
                                                 <div class="invalid-feedback">
@@ -38,7 +39,11 @@
                                             </div>
                                         </div>
 
-                                        <x-dashboard.validation-form  inputName="shipped_on" inputPlaceholder="Enter Shipment Date" inputFeedback="Please Enter Item Shipped Date" inputTitle="Item Shipped Date"/>
+
+
+
+
+
 
 
 

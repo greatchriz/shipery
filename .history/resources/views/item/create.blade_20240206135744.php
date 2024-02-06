@@ -38,7 +38,23 @@
                                             </div>
                                         </div>
 
-                                        <x-dashboard.validation-form  inputName="shipped_on" inputPlaceholder="Enter Shipment Date" inputFeedback="Please Enter Item Shipped Date" inputTitle="Item Shipped Date"/>
+                                        <div class="mb-3">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title">Pick-Date picker</h4>
+                                                </div>
+                                                <div class="card-body">
+                                                    <p class="mb-1">Default picker</p>
+                                                    <input name="datepicker" class="datepicker-default form-control picker__input" id="datepicker" readonly="" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="datepicker_root">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
 
 
 

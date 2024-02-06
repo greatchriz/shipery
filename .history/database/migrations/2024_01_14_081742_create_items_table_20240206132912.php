@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable()->default('text');
             $table->string('image_src')->nullable();
-            $table->string('tracking_number')->nullable();
+            $table->string('tracking_number');
             $table->foreignId('sender_id')->constrained('senders')->nullable();
             $table->foreignId('receiver_id')->constrained('receivers')->nullable();
             $table->enum('shipment_type', ['domestic', 'international']);
@@ -26,6 +26,8 @@ return new class extends Migration
         });
     }
 
+    //available columns:
+    //id, name, image_src, tracking_number, sender_id, receiver_id, shipment_type, weight, status, shipped_on, created_at, updated_at
 
     /**
      * Reverse the migrations.

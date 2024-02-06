@@ -15,7 +15,7 @@ class Item extends Model
 
     public function setShippedOnAttribute($value)
     {
-        $this->attributes['shipped_on'] = \Carbon\Carbon::parse($value)->format('Y-m-d');
+        $this->attributes['shipped_on'] = \Carbon\Carbon::parse($value)->format('Y-m-d H:i:s');
     }
 
 

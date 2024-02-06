@@ -122,8 +122,8 @@ class DashboardController extends Controller
         ]);
 
         Item::create([
-            'name' => $request->name,
-            'weight' => $request->weight,
+            'name' => $request->sender_id,
+            'weight' => $request->receiver_id,
             'shipped_on' => $request->shipped_on,
         ]);
 

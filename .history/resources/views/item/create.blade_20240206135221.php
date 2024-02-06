@@ -38,7 +38,11 @@
                                             </div>
                                         </div>
 
-                                        <x-dashboard.validation-form  inputName="shipped_on" inputPlaceholder="Enter Shipment Date" inputFeedback="Please Enter Item Shipped Date" inputTitle="Item Shipped Date"/>
+
+
+
+
+
 
 
 

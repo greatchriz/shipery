@@ -116,14 +116,14 @@ class DashboardController extends Controller
     public function itemStore(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'weight' => 'required',
+            'sender_id' => 'required',
+            'receiver_id' => 'required',
             'shipped_on' => 'required',
         ]);
 
         Item::create([
-            'name' => $request->name,
-            'weight' => $request->weight,
+            'sender_id' => $request->sender_id,
+            'receiver_id' => $request->receiver_id,
             'shipped_on' => $request->shipped_on,
         ]);
 
