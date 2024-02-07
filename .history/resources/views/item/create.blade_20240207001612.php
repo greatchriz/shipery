@@ -15,17 +15,18 @@
                                 @csrf
                                 <div class="row">
 
+                                    {{-- name --}}
                                     <div class="col-xl-12">
 
                                         {{-- available columns:
                                         id, name, image_src, tracking_number, sender_id, receiver_id, shipment_type, weight, status, shipped_on, created_at, updated_at --}}
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="sender">Sender
+                                            <label class="col-lg-4 col-form-label" for="validationCustom05">Sender
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <select class="default-select wide form-control" id="sender" name="sender_id">
+                                                <select class="default-select wide form-control" id="validationCustom05">
                                                     <option data-display="Select">Please select</option>
                                                     @foreach ($senders as $sender)
                                                         <option value="{{ $sender->id }}">{{ $sender->name }}</option>
@@ -33,25 +34,6 @@
                                                 </select>
                                                 <div class="invalid-feedback">
                                                     Please select a Sender.
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {{-- create another select form like thge one above for receiver --}}
-
-                                        <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="receiver">Receiver
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <select class="default-select wide form-control" id="receiver" name="receiver_id">
-                                                    <option data-display="Select">Please select</option>
-                                                    @foreach ($receivers as $receiver)
-                                                        <option value="{{ $receiver->id }}">{{ $receiver->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Please select a Receiver.
                                                 </div>
                                             </div>
                                         </div>

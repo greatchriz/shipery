@@ -15,6 +15,7 @@
                                 @csrf
                                 <div class="row">
 
+                                    {{-- name --}}
                                     <div class="col-xl-12">
 
                                         {{-- available columns:

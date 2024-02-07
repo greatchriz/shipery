@@ -139,7 +139,7 @@ class DashboardController extends Controller
     // itemEdit
     public function itemEdit(Item $item)
     {
-        $item = Item::with(['sender', 'receiver', 'trackingEvents'])->find($item->id);
+        $item = Item::with(['sender', 'receiver'])->find($item->id);
         return view('item.edit', compact('item'));
     }
 
@@ -165,15 +165,17 @@ class DashboardController extends Controller
     public function itemTrackingEventsStore(Request $request, Item $item)
     {
         $request->validate([
-            'title' => 'required',
+            'event_name' => 'required',
+            'event_date' => 'required',
         ]);
 
-        ItemTrackingEvent::create([
+        TrackingEvent::create([
             'item_id' => $item->id,
-            'title' => $request->title,
+            'event_name' => $request->event_name,
+            'event_date' => $request->event_date,
         ]);
 
-        return redirect()->route('item.edit', $item->id);
+        return redirect()->route('item.index');
 
     }
 

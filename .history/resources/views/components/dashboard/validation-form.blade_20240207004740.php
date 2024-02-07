@@ -5,9 +5,6 @@
     </label>
     <div class="col-lg-6">
         <input type="text" class="form-control" name="{{ $inputName }}" id="{{ $inputName }}" placeholder="{{ $inputPlaceholder }}" value="{{ $inputValue }}" {{ $disabled }} {{ $required }}>
-
-        {{--  --}}
-
         <div class="invalid-feedback">
             {{ $inputFeedback }}
         </div>

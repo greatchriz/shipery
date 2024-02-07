@@ -139,7 +139,7 @@ class DashboardController extends Controller
     // itemEdit
     public function itemEdit(Item $item)
     {
-        $item = Item::with(['sender', 'receiver', 'trackingEvents'])->find($item->id);
+        $item = Item::with(['sender', 'receiver'])->find($item->id);
         return view('item.edit', compact('item'));
     }
 
@@ -173,7 +173,7 @@ class DashboardController extends Controller
             'title' => $request->title,
         ]);
 
-        return redirect()->route('item.edit', $item->id);
+        return redirect()->route(['item.edit', $item->id]);
 
     }
 

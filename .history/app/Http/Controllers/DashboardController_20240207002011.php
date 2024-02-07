@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Models\Receiver;
 use App\Models\Sender;
-use App\Models\ItemTrackingEvent;
 
 use Illuminate\Http\Request;
 
@@ -133,47 +132,6 @@ class DashboardController extends Controller
         ]);
 
         return redirect()->route('item.index');
-
-    }
-
-    // itemEdit
-    public function itemEdit(Item $item)
-    {
-        $item = Item::with(['sender', 'receiver', 'trackingEvents'])->find($item->id);
-        return view('item.edit', compact('item'));
-    }
-
-    // itemUpdate
-    public function itemUpdate(Request $request, Item $item)
-    {
-        $request->validate([
-            'name' => 'sometimes|required',
-            'weight' => 'required',
-            'status' => 'required',
-        ]);
-
-        $item->update([
-            'weight' => $request->weight,
-            'status' => $request->status,
-        ]);
-
-        return redirect()->route('item.index');
-
-    }
-
-    // itemTrackingEventsStore
-    public function itemTrackingEventsStore(Request $request, Item $item)
-    {
-        $request->validate([
-            'title' => 'required',
-        ]);
-
-        ItemTrackingEvent::create([
-            'item_id' => $item->id,
-            'title' => $request->title,
-        ]);
-
-        return redirect()->route('item.edit', $item->id);
 
     }
 

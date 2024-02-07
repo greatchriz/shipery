@@ -173,7 +173,7 @@ class DashboardController extends Controller
             'title' => $request->title,
         ]);
 
-        return redirect()->route('item.edit', $item->id);
+        return redirect()->route(['item.edit', $item->id]);
 
     }
 

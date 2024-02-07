@@ -7,11 +7,12 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Create Item</h4>
+                        <h4 class="card-title">Edit Item</h4>
                     </div>
                     <div class="card-body">
                         <div class="form-validation">
-                            <form class="needs-validation" novalidate="" action="{{ route('item.store') }}" method="POST">
+                            <form class="needs-validation" novalidate="" action="{{ route('item.update', $item->id) }}" method="POST">
+                                @method('PUT')
                                 @csrf
                                 <div class="row">
 
@@ -20,41 +21,7 @@
                                         {{-- available columns:
                                         id, name, image_src, tracking_number, sender_id, receiver_id, shipment_type, weight, status, shipped_on, created_at, updated_at --}}
 
-                                        <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="sender">Sender
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <select class="default-select wide form-control" id="sender" name="sender_id">
-                                                    <option data-display="Select">Please select</option>
-                                                    @foreach ($senders as $sender)
-                                                        <option value="{{ $sender->id }}">{{ $sender->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Please select a Sender.
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {{-- create another select form like thge one above for receiver --}}
-
-                                        <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label" for="receiver">Receiver
-                                                <span class="text-danger">*</span>
-                                            </label>
-                                            <div class="col-lg-6">
-                                                <select class="default-select wide form-control" id="receiver" name="receiver_id">
-                                                    <option data-display="Select">Please select</option>
-                                                    @foreach ($receivers as $receiver)
-                                                        <option value="{{ $receiver->id }}">{{ $receiver->name }}</option>
-                                                    @endforeach
-                                                </select>
-                                                <div class="invalid-feedback">
-                                                    Please select a Receiver.
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <x-dashboard.validation-form  inputName="name" inputPlaceholder="Enter Item Name" inputFeedback="Please Enter Item Name" inputTitle="Item Sender Name" inputValue="{{ $item->sender->name }}" disabled="disabled" />
 
 
 
@@ -94,6 +61,8 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>
