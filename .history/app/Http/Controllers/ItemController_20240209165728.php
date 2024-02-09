@@ -25,7 +25,8 @@ class ItemController extends Controller
 
     public function itemReceiptDownload(Item $item)
     {
-        $pdf = Pdf::loadView('receipt.pdf', ['item' => $item]);
+
+        $pdf = Pdf::loadView('receipt.item', ['item' => $item]);
         return $pdf->download('invoice.pdf');
     }
 
