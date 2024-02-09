@@ -133,7 +133,7 @@
 
     <div class="container">
         <div class="col-sm-4">
-            <a class="quote_btn" href="{{ route('item.receipt', $item->id) }}">View Receipt</a>
+            <a class="quote_btn" href="{{ route('invoice.download', $item->id) }}">Download Invoice</a>
         </div>
     </div>
 </section>

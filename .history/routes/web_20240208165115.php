@@ -24,11 +24,7 @@ Route::get('/tracking', [MainPageController::class, 'tracking'])->name('tracking
 Route::post('/track', [ItemController::class, 'show'])->name('track');
 // item pdf
 
-//view item receipt route
-Route::get('/item-receipt/{item}', [ItemController::class, 'itemReceipt'])->name('item.receipt');
-Route::get('/item-receipt/download/{item}', [ItemController::class, 'itemReceiptDownload'])->name('item.receipt.download');
-
-
+Route::get('/invoke-item/{item}', ItemController::class)->name('invoice.download');
 
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');

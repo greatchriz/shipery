@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainPageController;
 use App\Http\Controllers\DashboardController;
+use Spatie\LaravelPdf\Facades\Pdf;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,13 +23,6 @@ Route::get('/about-us', [MainPageController::class, 'aboutUs'])->name('about-us'
 Route::get('/contact-us', [MainPageController::class, 'contactUs'])->name('contact-us');
 Route::get('/tracking', [MainPageController::class, 'tracking'])->name('tracking');
 Route::post('/track', [ItemController::class, 'show'])->name('track');
-// item pdf
-
-//view item receipt route
-Route::get('/item-receipt/{item}', [ItemController::class, 'itemReceipt'])->name('item.receipt');
-Route::get('/item-receipt/download/{item}', [ItemController::class, 'itemReceiptDownload'])->name('item.receipt.download');
-
-
 
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -79,9 +73,12 @@ Route::put('/items/{item}/tracking-events/{event}', [DashboardController::class,
 //item tracking events destroy
 Route::delete('/items/{item}/tracking-events/{event}', [DashboardController::class, 'itemTrackingEventsDestroy'])->middleware(['auth', 'verified'])->name('item.tracking-events.destroy');
 
-
-
-
+//invoice route
+Route::get('/create-invoice', function(){
+    Pdf::view('pdfs.invoice')
+    ->format('a4')
+    ->save('invoice.pdf');
+});
 
 
 Route::middleware('auth')->group(function () {

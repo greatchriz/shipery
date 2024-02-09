@@ -4,30 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\Pdf;
-
 
 
 
 class ItemController extends Controller
 {
-
-    //itemReceipt
-
-    public function itemReceipt(Item $item)
-    {
-        return view('receipt.item', [
-            'item' => $item
-        ]);
-    }
-
-    //itemReceiptDownload
-
-    public function itemReceiptDownload(Item $item)
-    {
-        $pdf = Pdf::loadView('receipt.item', ['item' => $item]);
-        return $pdf->download('invoice.pdf');
-    }
 
     /**
      * Display a listing of the resource.

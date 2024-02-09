@@ -22,13 +22,6 @@ Route::get('/about-us', [MainPageController::class, 'aboutUs'])->name('about-us'
 Route::get('/contact-us', [MainPageController::class, 'contactUs'])->name('contact-us');
 Route::get('/tracking', [MainPageController::class, 'tracking'])->name('tracking');
 Route::post('/track', [ItemController::class, 'show'])->name('track');
-// item pdf
-
-//view item receipt route
-Route::get('/item-receipt/{item}', [ItemController::class, 'itemReceipt'])->name('item.receipt');
-Route::get('/item-receipt/download/{item}', [ItemController::class, 'itemReceiptDownload'])->name('item.receipt.download');
-
-
 
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -78,9 +71,6 @@ Route::get('/items/{item}/tracking-events/{event}/edit', [DashboardController::c
 Route::put('/items/{item}/tracking-events/{event}', [DashboardController::class, 'itemTrackingEventsUpdate'])->middleware(['auth', 'verified'])->name('item.tracking-events.update');
 //item tracking events destroy
 Route::delete('/items/{item}/tracking-events/{event}', [DashboardController::class, 'itemTrackingEventsDestroy'])->middleware(['auth', 'verified'])->name('item.tracking-events.destroy');
-
-
-
 
 
 

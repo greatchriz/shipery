@@ -26,7 +26,7 @@ Route::post('/track', [ItemController::class, 'show'])->name('track');
 
 //view item receipt route
 Route::get('/item-receipt/{item}', [ItemController::class, 'itemReceipt'])->name('item.receipt');
-Route::get('/item-receipt/download/{item}', [ItemController::class, 'itemReceiptDownload'])->name('item.receipt.download');
+Route::get('/item-receipt/dowload/{item}', [ItemController::class, 'itemReceiptDownload'])->name('item.receipt.download');
 
 
 

@@ -4,31 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\Pdf;
-
-
+use function Spatie\LaravelPdf\Support\pdf;
 
 
 class ItemController extends Controller
 {
-
-    //itemReceipt
-
-    public function itemReceipt(Item $item)
+    public function __invoke(Item $item)
     {
-        return view('receipt.item', [
-            'item' => $item
-        ]);
+        return pdf()
+            ->view('pdfs.item', ['item' => $item])
+            ->name($item->tracking_number)
+            ->download('invoice.pdf');
     }
-
-    //itemReceiptDownload
-
-    public function itemReceiptDownload(Item $item)
-    {
-        $pdf = Pdf::loadView('receipt.item', ['item' => $item]);
-        return $pdf->download('invoice.pdf');
-    }
-
     /**
      * Display a listing of the resource.
      */
