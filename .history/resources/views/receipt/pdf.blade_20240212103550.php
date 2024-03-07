@@ -63,14 +63,9 @@
                                     <div class="mt-4 col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-lg-end">
                                         <div class="row align-items-center">
 											<div class="col-sm-9">
-												{{--
-
-
-
-
-
-
-                                                    --}}
+												{{-- <div class="brand-logo mb-2 inovice-logo">
+                                                    <img src="/otherp/images/logo.png" alt="logo" width="150px" height="40px">
+												</div> --}}
                                                 <span>Please send exact amount: <strong class="d-block">0.15050000 BTC</strong>
                                                     <strong>1DonateWffyhwAjskoEwXt83pHZxhLTr8H</strong></span><br>
                                                 <small class="text-muted">Current exchange rate 1BTC = $6590 USD</small>
